@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY', 'atri-samaveda')
 openai.api_key = os.environ.get('OPENAI_API_KEY')
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/", methods=["GET", "POST", "HEAD"])
 def atri_view():
     mantra = "You are in the presence of Atri — a modern rishi, seer of sound and clarity. Ask, explore, and co-evolve."
 
